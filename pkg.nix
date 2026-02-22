@@ -7,18 +7,18 @@
 }: let
   cleanName = "Fladder";
 
-  version = "0.10.0";
+  version = "0.10.1";
 
   src = fetchurl {
     url = "https://github.com/DonutWare/Fladder/releases/download/v${version}/Fladder-Linux-${version}.AppImage";
-    hash = "sha256-LU2IFM7Jt/Cbr3BNMgUrNFER0RD/oTlBoG1a+znsC1M=";
+    hash = "sha256-TGniwr+a2iB9a38/F1CXlrhcYt45FaM8qAUrBXGekx8=";
   };
 
   ghSource = fetchFromGitHub {
     owner = "DonutWare";
     repo = "Fladder";
     tag = "v${version}";
-    hash = "sha256-wY2h6lJWFH7UNxzGrSOLDj4cjAY9VAG8IUYaxWugVQQ=";
+    hash = "sha256-lmtEgBxCmEYcckhSAXhMPDzNQBluTyW0yjkt6Rr9byA=";
   };
 
   pname = "fladder";
