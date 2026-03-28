@@ -11,10 +11,6 @@
       pkgs = import nixpkgs { system = "x86_64-linux"; };
     in
     {
-      devShells.x86_64-linux.default = pkgs.mkShell {
-        nativeBuildInputs = with pkgs; [ ];
-      };
-
       packages.x86_64-linux.default = pkgs.callPackage ./pkg.nix { };
     };
 }
