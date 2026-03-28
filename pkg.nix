@@ -4,6 +4,7 @@
   fetchurl,
   stdenv,
   fetchFromGitHub,
+  lib,
 }: let
   cleanName = "Fladder";
 
@@ -11,6 +12,7 @@
 
   src = fetchurl {
     url = "https://github.com/DonutWare/Fladder/releases/download/v${version}/Fladder-Linux-${version}.AppImage";
+    # hash = lib.fakeHash;
     hash = "sha256-wQw+o8BmUtiAbMwfDzx2oTWFDIJPf2NIlsl+KMZGV98=";
   };
 
@@ -18,6 +20,7 @@
     owner = "DonutWare";
     repo = "Fladder";
     tag = "v${version}";
+    # hash = lib.fakeHash;
     hash = "sha256-D2FFIBRWi66TRB4LkUWZu/jc+edVXo70FZDzGFh11Wk=";
   };
 
